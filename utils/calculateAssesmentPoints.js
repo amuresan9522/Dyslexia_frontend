@@ -50,5 +50,8 @@ export const calculateAssesmentPoints = async (event) => {
 
     const formResult = _.sum(answersAsPoints)
 
-    return await getResourcesByPoints(formResult)
+    return await {
+        resources: getResourcesByPoints(formResult),
+        points: formResult
+    } 
 }

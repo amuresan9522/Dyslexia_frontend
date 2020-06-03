@@ -41,11 +41,11 @@ export default class Quiz extends React.Component {
         values.persist()
         await this.setState({ loading : true })
 
-        const userResources = await calculateAssesmentPoints(await values)
+        const userResources = await calculateAssesmentPoints(await values)  
 
         await this.setState({ userResources: userResources })
 
-        return addUserQuizActitvity({ resources: userResources.sites , points: userResources.points }, localStorage.getItem('token'))
+        return addUserQuizActitvity({ resources: userResources.resources , points: userResources.points }, localStorage.getItem('token'))
     }
 
     async setError (errorMessage) {

@@ -23,6 +23,8 @@ class Game extends Component {
 
     async componentDidMount() {
         const words = await getWords()
+        console.log('words = ', words)
+        console.log('length = ', words.length)
         await this.setState({ textArray : words })
     }
 
@@ -31,10 +33,14 @@ class Game extends Component {
     }
 
     onTypeFinished = async(event) => {
-        if(this.state.index === 9) {
+        if(this.state.index === this.state.textArray.length -1 ) {
+
             await this.setState({ gameOver : true, endTime: moment() })
 
-            const { startTime, endTime, textArray, userWords } = this.state;
+            const { startTime, endTime, textArray } = this.state;
+
+            const userWords =  _.concat(this.state.userWords, [this.state.userWord])
+            
             await recordGameResult({ start: startTime, end: endTime, words: textArray, userInput: userWords }, localStorage.getItem('token'))
         }
 

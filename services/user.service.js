@@ -34,6 +34,7 @@ export const addUserQuizActitvity = (data, token) => {
             "Content-Type": 'application/json'
         }
     }
+    console.log('data = ', data)
     return axios.post(`${ENV_VARS.SERVER_URL}/user/activity/quiz`,data, options)
 }
 
