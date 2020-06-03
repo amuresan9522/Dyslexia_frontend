@@ -1,0 +1,32 @@
+{
+  "name": "frontend",
+  "version": "4.0.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.53",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "clsx": "latest",
+    "lodash": "^4.17.15",
+    "moment": "^2.26.0",
+    "next": "latest",
+    "next-images": "^1.4.0",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-alert": "^7.0.1",
+    "react-alert-template-basic": "^1.0.0",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "latest",
+    "react-iframe": "^1.8.0",
+    "react-scripts": "^3.4.1",
+    "react-transition-group": "^1.2.1",
+    "wordbeater": "git+https://github.com/bradtraversy/wordbeater.git#master"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
