@@ -79,13 +79,14 @@ class Game extends Component {
                 (
                     
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "50px"}}>
-                        <h1>Your Word Is : <span style={{ color: "red"}}><b>{this.state.textArray[this.state.index]} </b> </span> </h1>
+                        <h1> Try to type this word: <span style={{ color: "red"}}><b>{this.state.textArray[this.state.index]} </b> </span> </h1>
+                        <h4>You are currently at word: <span style={{ color: "green", fontfamily: "Satisfy"}}  ><b> {this.state.index +1} </b></span> out of 5 </h4>
                     <Form >
                         <Form.Group>
                             <Form.Control value={this.state.userWord} size="md" type="text" placeholder="Type Here" required onChange={this.handleChange}/>
                             <br />
                         </Form.Group>
-                        <Button variant="primary" onClick={this.onTypeFinished} style={{marginLeft: "16px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Next word</Button>
+                        <Button variant="primary" onClick={this.onTypeFinished} style={{marginLeft: "20px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Next word</Button>
                     </Form>
                     </div>
                 )
