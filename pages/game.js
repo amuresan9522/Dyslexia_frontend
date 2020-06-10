@@ -86,7 +86,8 @@ class Game extends Component {
                             <Form.Control value={this.state.userWord} size="md" type="text" placeholder="Type Here" required onChange={this.handleChange}/>
                             <br />
                         </Form.Group>
-                        <Button variant="primary" onClick={this.onTypeFinished} style={{marginLeft: "20px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Next word</Button>
+                        <Button variant="primary" onClick={this.onTypeFinished} style={{marginLeft: "0", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Next word</Button>
+                        <Button variant="primary" onClick={this.onTypeFinished} style={{marginLeft: "40px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Check word</Button>
                     </Form>
                     </div>
                 )
