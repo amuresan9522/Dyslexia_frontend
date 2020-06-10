@@ -8,6 +8,13 @@ import {  addUserGameActitvity, recordGameResult } from '../services/user.servic
 import { getWords } from '../services/game.service';
 import AuthorisedMenu from '../components/Menu/AuthorisedMenu';
 
+const radiusImage =
+    {
+        src: "https://source.unsplash.com/azA1hLbjBBo",
+        text:"Test yourself",
+    };
+   
+
 class Game extends Component {
     state = {
         index: 0,
@@ -47,6 +54,19 @@ class Game extends Component {
         await this.setState({ index: this.state.index + 1, isWritenCorrectly: false, userWords: _.concat(this.state.userWords, [this.state.userWord]), userWord : '' })
    }
 
+
+   onTypeCheck = async(event) => {
+    if(this.state.index === this.state.textArray.length -1 ) {
+
+        await this.setState({ gameOver : false, endTime: moment() })
+        
+        await recordGameResult({ start: startTime, end: endTime, words: textArray, userInput: userWords }, localStorage.getItem('token'))
+    }
+    if (this.checkWordIsWritenCorrectly){
+        alert("Test");
+    }
+}
+
     checkWordIsWritenCorrectly = async (event) => {
         if (event.target.value === this.state.textArray[this.state.index]) {
             await this.setState({ isWritenCorrectly: true })
@@ -72,8 +92,20 @@ class Game extends Component {
                 </div>
                 :
                 !this.state.hasStarted ? 
-                <div style={{ display: "flex", margin: "50px", justifyContent: "center"}}>
-                    <Button variant="primary" onClick={this.startGame} style={{marginLeft: "16px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Start Game</Button>
+                <div style={{  margin: "50px", justifyContent: "center"}}>
+                    <div>
+                    <Button variant="primary" onClick={this.startGame} style={{margin: "auto", display: "table", "margin-bottom":"5px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Start Game</Button>
+                    </div>
+
+                    <div>
+                    <img src={radiusImage.src} width= "100%" height="auto" style={{objectFit : "cover", paddingLeft: "10px"}}/>
+                    </div>
+                    
+                </div>
+                :
+                !this.state.hasStarted ? 
+                <div style={{display: "bottom"}}>
+                
                 </div>
                 : 
                 (
@@ -87,7 +119,7 @@ class Game extends Component {
                             <br />
                         </Form.Group>
                         <Button variant="primary" onClick={this.onTypeFinished} style={{marginLeft: "0", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Next word</Button>
-                        <Button variant="primary" onClick={this.onTypeFinished} style={{marginLeft: "40px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Check word</Button>
+                        <Button variant="primary" onSubmit={this.onTypeCheck} style={{marginLeft: "40px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Check word</Button>
                     </Form>
                     </div>
                 )
