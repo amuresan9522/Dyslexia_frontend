@@ -6,6 +6,5 @@
 2.  Run `npm install` command
 3.  To start the server, run `npm run dev`
 
-petro was here
 
 
