@@ -91,7 +91,7 @@ export default class Quiz extends React.Component {
                                 )
                             })}
                             
-                            <Button variant="primary" type="submit" style={{marginLeft: "16px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>
+                            <Button variant="primary" type="submit" style={{marginLeft: "16px", backgroundColor: "#F08080", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid #F08080"}}>
                                 {this.state.loading ? <CircularProgress color="inherit" style={{ width: "20px", height: '15px'}}/>  : 'Submit'}
                             </Button>
                         </Form>

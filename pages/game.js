@@ -73,7 +73,7 @@ class Game extends Component {
                 :
                 !this.state.hasStarted ? 
                 <div style={{ display: "flex", margin: "50px", justifyContent: "center"}}>
-                    <Button variant="primary" onClick={this.startGame} style={{marginLeft: "16px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Start Game</Button>
+                    <Button variant="primary" onClick={this.startGame} style={{marginLeft: "16px", backgroundColor: "#F08080", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid #F08080"}}>Start Game</Button>
                 </div>
                 : 
                 (
@@ -86,7 +86,7 @@ class Game extends Component {
                             <Form.Control value={this.state.userWord} size="md" type="text" placeholder="Type Here" required onChange={this.handleChange}/>
                             <br />
                         </Form.Group>
-                        <Button variant="primary" onClick={this.onTypeFinished} style={{marginLeft: "20px", backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>Next word</Button>
+                        <Button variant="primary" onClick={this.onTypeFinished} style={{marginLeft: "20px", backgroundColor: "red", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid #F08080"}}>Next word</Button>
                     </Form>
                     </div>
                 )

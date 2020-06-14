@@ -98,7 +98,7 @@ export default class Register extends React.Component {
                         </Form.Control.Feedback>
                         <br />
                     </Form.Group>
-                    <Button variant="primary" type="submit" style={{ backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>
+                    <Button variant="primary" type="submit" style={{ backgroundColor: "#F08080", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid #F08080"}}>
                         {this.state.loading ? <CircularProgress color="inherit" style={{ width: "20px", height: '15px'}}/>  : 'Register'}
                     </Button>
                 </Form>

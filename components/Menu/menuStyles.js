@@ -4,7 +4,7 @@ export const imageContainerStyle = {
 }
 
 export const titleStyle = {
-    backgroundColor: "orange",
+    backgroundColor: "#F08080",
     color: "white",
     display: "flex",
     flexDirection: "row",

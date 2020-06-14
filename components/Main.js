@@ -43,7 +43,7 @@ export default class Main extends React.Component {
         return (
             <React.Fragment>
                 <Menu/>
-                <Jumbotron fluid style={{ margin: '38px', backgroundColor: "orange", color: "white", fontFamily: "Satify"}}>
+                <Jumbotron fluid style={{ margin: '38px', backgroundColor: "#F08080", color: "white", fontFamily: "Satify"}}>
                     <Container>
                         <h4>
                         Reading should be a fun, relaxing activity that can help you spread your wings and conquer the world.

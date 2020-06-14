@@ -14,7 +14,7 @@ export default function About() {
             <br/><br/><br/><br/>
             <h1 style={{ textAlign: "center"}}>
               <span style={{ color: "red"}}>Support,</span>
-              <span style={{ color: "Orange"}}>Practice,</span>
+              <span style={{ color: "#F08080"}}>Practice,</span>
               <span style={{ color: "Purple"}}>& Education</span>
             </h1>
             <div style={{ display: "flex", flexDirection: "row", margin: '50px', width:"100%"}}>

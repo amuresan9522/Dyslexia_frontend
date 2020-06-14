@@ -38,7 +38,7 @@ export default class ImageCarousel extends React.Component {
                                 position: "absolute",
                                 bottom: "8px",
                                 left: "16px",
-                                backgroundColor: "orange",
+                                backgroundColor: "#F08080",
                                 fontSize: "24px",
                                 textAlign: "left",
                                 padding: "20px",

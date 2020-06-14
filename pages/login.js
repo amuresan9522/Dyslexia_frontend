@@ -77,7 +77,7 @@ export default class Login extends React.Component {
                             Password is required
                         </Form.Control.Feedback>
                     </Form.Group>
-                    <Button variant="primary" type="submit" style={{ backgroundColor: "orange", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid orange"}}>
+                    <Button variant="primary" type="submit" style={{ backgroundColor: "#F08080", fontFamily: "Satisfy", fontWeight: "bold", border: "1px solid #F08080"}}>
                         {this.state.loading ? <CircularProgress color="inherit" style={{ width: "20px", height: '15px'}}/>  : 'Log in'}
                     </Button>
                 </Form>
