@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
+          <img src = "/Users/alex/Documents/licenta-alexandra/Dyslexia-frontend/assets/pic.jpg"/>
           <Main />
           <NextScript />
         </body>
